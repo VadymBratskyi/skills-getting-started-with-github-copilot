@@ -1,6 +1,6 @@
+
 """
 High School Management System API
-
 A super simple FastAPI application that allows students to view and sign up
 for extracurricular activities at Mergington High School.
 """
@@ -19,7 +19,7 @@ current_dir = Path(__file__).parent
 app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
           "static")), name="static")
 
-# In-memory activity database
+ # In-memory activity database
 activities = {
     "Chess Club": {
         "description": "Learn strategies and compete in chess tournaments",
@@ -79,6 +79,8 @@ activities = {
         "participants": ["harper@mergington.edu", "jackson@mergington.edu"]
     }
 }
+
+app.activities = activities
 
 
 @app.get("/")
