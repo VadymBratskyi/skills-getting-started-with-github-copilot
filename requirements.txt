@@ -1,2 +1,7 @@
+# For testing FastAPI
+pytest
+httpx
+pytest-cov
+fastapi[testclient]
 fastapi
 uvicorn
